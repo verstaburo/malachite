@@ -177,6 +177,7 @@
   &__media {
     position: relative;
     overflow: hidden;
+    user-select: none;
 
     @include rule(height, (xl: 330, lg: 235, md: 175, sm: 295));
     @include rule(border-radius, (xl: 10, lg: 10, md: 10, sm: 10));

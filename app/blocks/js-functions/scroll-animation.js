@@ -55,9 +55,8 @@ export function scrollAnimation() {
 
   if ($('.js-sr_animate').length) {
     sr.reveal('.js-sr_animate', {
-      interval: 100,
       opacity: 1,
-      beforeReveal: function (el) {
+      afterReveal: function (el) {
         el.classList.add('is-animate');
       },
     });

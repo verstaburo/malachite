@@ -35,7 +35,7 @@
     transform: scale(0);
   }
 
-  .is-animate & {
+  .js-sr.is-animate & {
     transform: scale(1);
   }
 }

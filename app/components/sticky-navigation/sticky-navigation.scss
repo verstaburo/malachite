@@ -6,11 +6,16 @@
   box-sizing: border-box;
   cursor: pointer;
   z-index: 8;
+  user-select: none;
 
   @include rule(left, (xl: 126, lg: 85, md: 53, sm: 0));
   @include rule(bottom, (xl: 140, lg: 140, md: 100, sm: 60));
   @include rule(padding-left, (xl: 20, lg: 20, md: 20, sm: 20));
   @include rule(padding-right, (xl: 20, lg: 20, md: 20, sm: 20));
+
+  .fancybox-active & {
+    pointer-events: none;
+  }
 
   &__item {
     display: block;

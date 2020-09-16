@@ -75,6 +75,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 
     @include grid-column(2, 3);
     @include grid-row(1, 2);
