@@ -1,0 +1,16 @@
+.link {
+  $b: &;
+
+  display: inline-block;
+  text-decoration: none;
+  background-position: 0 200%;
+  background-repeat: repeat-x;
+  background-size: 50% 50%;
+  background-color: transparent;
+  background-image: linear-gradient(color(border), color(border));
+  transition: background $ease-main;
+
+  &:hover {
+    background-position: 0 100%;
+  }
+}

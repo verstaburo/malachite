@@ -1,0 +1,25 @@
+mixin popups()
+  +b.popups&attributes(attributes)
+    block
+
+mixin popup()
+  +b.popup&attributes(attributes)
+    block
+
+mixin ui-kit-popups
+  +ui-section
+    +ui-section-head
+      +ui-title Попапы
+      +ui-path
+        p Блок: blocks/popups/popups
+      +ui-description
+        p На ссылку вешается класс .js-fancybox, в [href] указывается id попапа (href="#popup")
+        p Демонстрация попапов на странице <a href="sitemap.html">sitemap.html</a>
+        p
+          a(href="http://fancyapps.com/fancybox/3/docs/" target="_blank") Документация
+        p
+          a.js-fancybox(href="https://youtu.be/BHACKCNDMW8") Пример
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

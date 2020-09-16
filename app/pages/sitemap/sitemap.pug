@@ -1,0 +1,10 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Карта верстки'
+
+block content
+  +b.sitemap
+    .container
+      +e.A.link(href="ui-kit.html") UI-kit
+      +e.A.link(href="index.html") Страница index

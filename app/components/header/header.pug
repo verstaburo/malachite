@@ -1,0 +1,22 @@
+mixin header()
+  +b.header&attributes(attributes)
+    +e.logo
+      +e.IMG(src="assets/images/logo.svg").__icon
+      +e.IMG(src="assets/images/logo-text.svg").__text
+    block
+
+mixin ui-kit-header()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент header
+      +ui-path
+        p Компонент: components/header/header
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +header
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

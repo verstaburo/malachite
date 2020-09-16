@@ -1,0 +1,36 @@
+mixin footer()
+  +b.footer&attributes(attributes)
+    .container
+      +e.UL.navigation
+        +e.LI
+          +link().__link.js-anchor(href="#about") ABOUT
+        +e.LI
+          +link().__link.js-anchor(href="#services") SERVICES
+        +e.LI
+          +link().__link.js-anchor(href="#contacts") CONTACTS
+      +e.UL.navigation_end
+        +e.LI
+          +link().__link(href="#") PRIVACY POLICY
+        +e.LI
+          +link().__link(href="#") COOCKIE POLICY
+      +e.logo
+        +e.IMG(src="assets/images/logo.svg")
+      +e.copyright
+        +e.text &copy; Photo Copyright Dassault Aviation
+    block
+
+mixin ui-kit-footer()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент footer
+      +ui-path
+        p Компонент: components/footer/footer
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +footer
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

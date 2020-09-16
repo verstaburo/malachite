@@ -1,0 +1,29 @@
+mixin main-navigation()
+  +b.main-navigation&attributes(attributes)
+    +e.content
+      +e.top
+        +link.__top-link.js-anchor(href="#about" data-fancy-close) About
+        +link.__top-link.js-anchor(href='#charter' data-fancy-close) Charter Brokerage
+        +link.__top-link.js-anchor(href='#aircraft' data-fancy-close) Aircraft management
+        +link.__top-link.js-anchor(href="#contacts" data-fancy-close) Contacts
+      +e.bottom
+        +link.__bottom-link(href='#') TERMS AND CONDITIONS
+        +link.__bottom-link(href='#') PRIVACY POLICY
+        +link.__bottom-link(href='#') COOCKIE POLICY
+    block
+
+mixin ui-kit-main-navigation()
+  +ui-section
+    +ui-section-head
+      +ui-title Компонент main-navigation
+      +ui-path
+        p Компонент: components/main-navigation/main-navigation
+      +ui-description
+        p Описание компонента
+
+    +ui-section-content()
+      +main-navigation
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

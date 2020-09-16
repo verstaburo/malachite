@@ -1,0 +1,17 @@
+include _externalIncludes
+include _internalIncludes
+
+doctype html
+html(lang='ru')
+  include head
+  body
+    +header
+    +b.MAIN.page
+      block content
+    +footer
+    +sticky-navigation.js-fancybox(data-src="#navigation")
+    +popups
+      +main-navigation#navigation
+      block popup
+    script(src='assets/scripts/app.min.js')
+    script(src='assets/scripts/main.js')
