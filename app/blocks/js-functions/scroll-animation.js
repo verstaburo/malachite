@@ -11,7 +11,7 @@ export function scrollAnimation() {
     scale: 1,
     delay: 0,
     easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
-    duration: 1000,
+    duration: 500,
     cleanup: true,
   });
 
@@ -37,6 +37,30 @@ export function scrollAnimation() {
 
   if ($('.js-sr_top').length) {
     sr.reveal('.js-sr_top', getSettings('top'));
+  }
+
+  if ($('.js-sr_scale').length) {
+    sr.reveal('.js-sr_scale', {
+      interval: 100,
+      scale: 0,
+    });
+  }
+
+  if ($('.js-sr_fade').length) {
+    sr.reveal('.js-sr_fade', {
+      interval: 100,
+      opacity: 0,
+    });
+  }
+
+  if ($('.js-sr_animate').length) {
+    sr.reveal('.js-sr_animate', {
+      interval: 100,
+      opacity: 1,
+      beforeReveal: function (el) {
+        el.classList.add('is-animate');
+      },
+    });
   }
 
   // Показываем элементы, если ScrollReveal не поддерживается

@@ -27,6 +27,19 @@
   visibility: hidden;
 }
 
+.malachite-mask {
+  transform-origin: 50% 50%;
+  transition: transform .5s cubic-bezier(.6, .2, .1, 1);
+
+  .js-sr & {
+    transform: scale(0);
+  }
+
+  .is-animate & {
+    transform: scale(1);
+  }
+}
+
 @each $key, $val in $breakpoints {
 
   .hide-#{$key} {

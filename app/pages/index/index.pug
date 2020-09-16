@@ -7,16 +7,17 @@ block content
   +section._about#about(data-section="about")
     .container
       +e.header
-        +e.H4.subtitle ABOUT
-        +e.H1.title_big The luxury <br> of endless <br> possibilities
-      +e.content
+        +e.H4.subtitle.js-sr_bottom ABOUT
+        +e.H1.title_big.js-sr_bottom The luxury <br> of endless <br> possibilities
+      +e.content.js-sr_bottom
         p Malachite Jet is an executive aviation company <br class="hide-sm"> commited to providing exceptional charter sales <br class="hide-sm"> services for the most particular needs and aircraft <br class="hide-sm"> management solutions for all types of business jets.
-      +e.illus
+      +e.illus.js-sr_animate
         +e.SVG.stone(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1107.05 940.96")
           defs
             clipPath.malachite-mask(id="a")
               path(d="M3,309.78c21.52,196,187.84,495.1,442,609.45S1158.38,672,1102.35,408.5-65.1-307.93,3,309.78Z" fill="none")
           g(clip-path="url(#a)")
+            rect(x="0" y="0" width="1100" height="1000" fill="#11201b")
             image(width="4096" height="3070" transform="translate(-74 1) scale(0.31)" xlink:href="assets/images/airplane.jpg")
   +section._service#services(data-section="services")
     +e.bg
@@ -36,12 +37,12 @@ block content
     +section._charter#charter
       .container
         +e.header
-          +e.H4.subtitle SERVICES
-          +e.H3.title Charter <br> Brokerage
-          hr
-        +e.content
+          +e.H4.subtitle.js-sr_bottom SERVICES
+          +e.H3.title.js-sr_bottom Charter <br> Brokerage
+          hr.js-sr_bottom
+        +e.content.js-sr_bottom
           p Malachite has been long known as a symbol of reassurance and reliability for those air traveling. Our dedicated team of business jet charter specialists are available at any time of day and night, ready to provide you with a tailor-made all-inclusive travel solution to every need of your customer ensuring that the whole experience is as effortless and luxurious as the flight itself.
-        +e.media
+        +e.media.js-sr_fade
           +e.PICTURE.image
             source(srcset="assets/images/charter-sm.webp, assets/images/charter-sm@2x.webp 2x, assets/images/charter-sm@3x.webp 3x" type="image/webp" media="(max-width: 767px)")
             source(srcset="assets/images/charter-md.webp, assets/images/charter-md@2x.webp 2x, assets/images/charter-md@3x.webp 3x" type="image/webp" media="(max-width: 1199px)")
@@ -56,12 +57,12 @@ block content
     +section._aircraft#aircraft
       .container
         +e.header
-          +e.H4.subtitle SERVICES
-          +e.H3.title Aircraft <br> Management
-          hr
-        +e.content
+          +e.H4.subtitle.js-sr_bottom SERVICES
+          +e.H3.title.js-sr_bottom Aircraft <br> Management
+          hr.js-sr_bottom
+        +e.content.js-sr_bottom
           p Being an owner, operator and manager of a business jet all at once can be time consuming hassle and a challenge. We have the extensive knowledge, experience and resources to oversee everything from purchasing to administrative control of your aircraft to make sure that you enjoy the benefits and experience of aircraft ownership
-        +e.media
+        +e.media.js-sr_fade
           +e.copyright &copy; Copyright Dassault Aviation
           +e.PICTURE.image
             source(srcset="assets/images/aircraft-sm.webp, assets/images/aircraft-sm@2x.webp 2x, assets/images/aircraft-sm@3x.webp 3x" type="image/webp" media="(max-width: 767px)")
@@ -77,10 +78,10 @@ block content
   +section._contacts#contacts(data-section="contacts")
     .container
       +e.header
-        +e.H4.subtitle CONTACTS
-        +e.H3.title
+        +e.H4.subtitle.js-sr_bottom CONTACTS
+        +e.H3.title.js-sr_bottom
           +link().__mail(href="mailto:info@malachitejet.com") info@malachitejet.com
-      +e.content_small
+      +e.content_small.js-sr_bottom
         p Malachite Jet Solutions LTD
         p Company No. 171877
         p 7th Floor, 51, Rue du Savoir Cybercity, Ebene 72201 Mauritius
