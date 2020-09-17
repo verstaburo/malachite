@@ -282,11 +282,13 @@
 
   &__stone {
     position: absolute;
+    left: 0;
 
-    @include rule(left, (xl: 0, sm: -35));
     @include rule(top, (xl: -145, lg: -103, md: -77, sm: 0));
     @include rule(width, (xl: 1107, lg: 785, md: 590, sm: 446));
     @include rule(height, (xl: 941, lg: 668, md: 502, sm: 380));
+    @include rule(margin-left, (sm: -35));
+    @include rule(margin-right, (sm: -111));
 
     @include screen('sm') {
       position: relative;
@@ -302,6 +304,7 @@
 
   &_about {
     overflow: hidden;
+    width: 100%;
     z-index: 2;
 
     @include rule(padding-top, (xl: 242, lg: 195, md: 174, sm: 136));
