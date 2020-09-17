@@ -1,0 +1,171 @@
+.document {
+  $b: &;
+
+  display: block;
+  width: 100%;
+  font-weight: 300;
+  line-height: 1.32;
+  letter-spacing: -.01em;
+  box-sizing: border-box;
+  hyphens: auto;
+  overflow: hidden;
+
+  @include rule(font-size, (xl: 23, lg: 17, md: 15, sm: 13));
+  @include rule(padding-right, (sm: 35));
+
+  &_fz20 {
+    @include rule(font-size, (xl: 20, lg: 17, md: 15, sm: 13));
+  }
+
+  h1 {
+    font-family: $font-second;
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: -.01em;
+    white-space: normal;
+
+    @include rule(font-size, (xl: 90, lg: 65, md: 60, sm: 50));
+
+    &:not(:first-child) {
+      margin-top: 1.5em;
+    }
+  }
+
+  h2 {
+    font-family: $font-second;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    line-height: 1.1;
+
+    @include rule(font-size, (xl: 50, lg: 40, md: 40, sm: 40));
+
+    &:not(:first-child) {
+      margin-top: 1.5em;
+    }
+  }
+
+  h3 {
+    font-family: $font-second;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    line-height: 1.1;
+
+    @include rule(font-size, (xl: 35, lg: 25, md: 23, sm: 20));
+
+    &:not(:first-child) {
+      margin-top: .2em;
+    }
+  }
+
+  h4 {
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -.01em;
+
+    @include rule(font-size, (xl: 23, lg: 17, md: 15, sm: 13));
+
+    &:not(:first-child) {
+      margin-top: .05em;
+    }
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    background-position: 0 200%;
+    background-repeat: repeat-x;
+    background-size: 50% 50%;
+    background-color: transparent;
+    background-image: linear-gradient(color(border), color(border));
+    transition: background $ease-main;
+    cursor: pointer;
+    // word-break: break-word;
+
+    &:hover {
+      background-position: 0 100%;
+    }
+  }
+
+  ul {
+
+    li {
+
+      &::before {
+        content: '• ';
+        display: inline;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: list1;
+
+    ol {
+      counter-reset: list2;
+
+      ol {
+        counter-reset: list3;
+      }
+    }
+
+    li {
+      position: relative;
+
+      &:not(:first-child) {
+        margin-top: .48em;
+      }
+
+      h3 {
+
+        &::before {
+          display: inline;
+          counter-increment: list1;
+          content: counter(list1) '\002E\0020';
+        }
+
+        &:not(:last-child) {
+          margin-bottom: -.055em;
+        }
+      }
+
+      ol li {
+
+        &::before {
+          position: static;
+          display: inline;
+          counter-increment: list2;
+          content: counter(list1) '.' counter(list2) '\002E\0020';
+        }
+
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+
+      li ol li {
+
+        &::before {
+          position: static;
+          display: inline;
+          counter-increment: list3;
+          content: counter(list1) '.' counter(list2) '.' counter(list3) '\002E\0020';
+        }
+
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  section {
+
+    &:not(:first-child) {
+      margin-top: 1.3em;
+    }
+  }
+}

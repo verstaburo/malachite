@@ -56,6 +56,14 @@
         @include rule(margin-top, (xl: 66, lg: 47, md: 50, sm: 51));
       }
     }
+
+    &_fz35 {
+      @include rule(font-size, (xl: 35, lg: 25, md: 23, sm: 20));
+
+      &:not(:first-child) {
+        margin-top: 3.33em;
+      }
+    }
   }
 
   &__mail {
@@ -85,6 +93,56 @@
 
       &:not(:first-child) {
         @include rule(margin-top, (xl: 40, lg: 30, md: 12, sm: 25));
+      }
+    }
+
+    b {
+      font-weight: 500;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      background-position: 0 200%;
+      background-repeat: repeat-x;
+      background-size: 50% 50%;
+      background-color: transparent;
+      background-image: linear-gradient(color(border), color(border));
+      transition: background $ease-main;
+      cursor: pointer;
+
+      &:hover {
+        background-position: 0 100%;
+      }
+    }
+
+    &_fz23 {
+      font-weight: 300;
+      line-height: 1.3;
+      letter-spacing: -.01em;
+
+      @include rule(font-size, (xl: 23, lg: 17, md: 15, sm: 13));
+
+      p {
+
+        &:not(:first-child) {
+          margin-top: 1.5em;
+        }
+      }
+    }
+
+    &_fz20 {
+      font-weight: 300;
+      line-height: 1.3;
+      letter-spacing: -.01em;
+
+      @include rule(font-size, (xl: 20, lg: 17, md: 15, sm: 13));
+
+      p {
+
+        &:not(:first-child) {
+          margin-top: 1.3em;
+        }
       }
     }
   }
@@ -232,6 +290,13 @@
 
     @include screen('sm') {
       position: relative;
+    }
+  }
+
+  &__text-zone {
+
+    &:not(:first-child) {
+      margin-top: 3.8em;
     }
   }
 
@@ -475,6 +540,42 @@
         box-sizing: border-box;
 
         @include rule(padding-right, (sm: 35));
+      }
+    }
+  }
+
+  &_policy {
+    @include rule(padding-top, (xl: 242, lg: 195, md: 174, sm: 136));
+    @include rule(padding-bottom, (xl: 200, lg: 200, md: 200, sm: 100));
+
+    #{$b} {
+
+      &__content {
+        @include rule(padding-right, (sm: 35));
+
+        &:not(:first-child) {
+          margin-top: 2em;
+        }
+      }
+    }
+
+    &_cookie {
+
+      #{$b} {
+
+        &__content {
+
+          &:not(:first-child) {
+            margin-top: 5.3em;
+          }
+        }
+
+        &__text-zone {
+
+          &:not(:first-child) {
+            margin-top: 3.6em;
+          }
+        }
       }
     }
   }

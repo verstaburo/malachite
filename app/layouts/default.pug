@@ -5,7 +5,9 @@ doctype html
 html(lang='ru')
   include head
   body
-    +header
+    block header
+    - var isLink = (logoLink || false)
+    +header(isLink)
     +b.MAIN.page
       block content
     +footer

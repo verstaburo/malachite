@@ -9,7 +9,7 @@
   z-index: 2;
 
   @include rule(padding-top, (xl: 113, lg: 82, md: 61, sm: 77));
-  @include rule(padding-bottom, (xl: 55, lg: 42, md: 24, sm: 43));
+  @include rule(padding-bottom, (xl: 55, lg: 42, md: 43, sm: 60));
 
   .container {
     @include display-grid;

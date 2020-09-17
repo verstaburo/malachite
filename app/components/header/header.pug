@@ -1,8 +1,13 @@
-mixin header()
+mixin header(isLink)
   +b.header&attributes(attributes)
-    +e.logo
-      +e.IMG(src="assets/images/logo.svg").__icon
-      +e.IMG(src="assets/images/logo-text.svg").__text
+    if isLink
+      +e.A.logo(href="/")
+        +e.IMG(src="assets/images/logo.svg").__icon
+        +e.IMG(src="assets/images/logo-text.svg").__text
+    else
+      +e.logo
+        +e.IMG(src="assets/images/logo.svg").__icon
+        +e.IMG(src="assets/images/logo-text.svg").__text
     block
 
 mixin ui-kit-header()

@@ -2,14 +2,14 @@ mixin main-navigation()
   +b.main-navigation&attributes(attributes)
     +e.content
       +e.top
-        +link.__top-link.js-anchor(href="#about" data-fancy-close) About
-        +link.__top-link.js-anchor(href='#charter' data-fancy-close) Charter Brokerage
-        +link.__top-link.js-anchor(href='#aircraft' data-fancy-close) Aircraft management
-        +link.__top-link.js-anchor(href="#contacts" data-fancy-close) Contacts
+        +link.__top-link.js-anchor(href="index.html#about" data-fancy-close) About
+        +link.__top-link.js-anchor(href='index.html#charter' data-fancy-close) Charter Brokerage
+        +link.__top-link.js-anchor(href='index.html#aircraft' data-fancy-close) Aircraft management
+        +link.__top-link.js-anchor(href="index.html#contacts" data-fancy-close) Contacts
       +e.bottom
         +link.__bottom-link(href='#') TERMS AND CONDITIONS
-        +link.__bottom-link(href='#') PRIVACY POLICY
-        +link.__bottom-link(href='#') COOCKIE POLICY
+        +link.__bottom-link(href='privacy.html') PRIVACY POLICY
+        +link.__bottom-link(href='cookies.html') COOCKIE POLICY
     block
 
 mixin ui-kit-main-navigation()

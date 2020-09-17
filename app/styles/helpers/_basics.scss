@@ -51,7 +51,7 @@ html, body {
   padding: 0;
   overflow-x: hidden; // Убираем горизонтальный скролл
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -59,8 +59,13 @@ body {
   font-size: 16px;
   color: color(basic);
   background-color: color(main);
+  background-image: linear-gradient(90deg, color(main) 4.48%, color(main) 96.25%);
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
+
+  @include display-grid;
+  @include grid-template-columns(1, 2);
+  @include grid-template-rows(1fr, auto);
 }
 
 img {
