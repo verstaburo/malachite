@@ -71,7 +71,7 @@
     font-family: $font-main;
     line-height: 1.3;
 
-    @include rule(font-size, (sm: 24));
+    @include rule(font-size, (xl: 45, lg: 30, md: 30, sm: 18));
   }
 
   &__content {
@@ -92,7 +92,7 @@
       @include rule(font-size, (xl: 17, lg: 12, md: 12, sm: 15));
 
       &:not(:first-child) {
-        @include rule(margin-top, (xl: 40, lg: 30, md: 12, sm: 25));
+        @include rule(margin-top, (xl: 50, lg: 36, md: 20, sm: 20));
       }
     }
 
@@ -535,7 +535,7 @@
       &__title {
 
         &:not(:first-child) {
-          @include rule(margin-top, (xl: 111, lg: 77, md: 54, sm: 49));
+          @include rule(margin-top, (xl: 111, lg: 77, md: 54, sm: 44));
         }
       }
 
